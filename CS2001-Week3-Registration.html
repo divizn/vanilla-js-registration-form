@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Fresh Food For All
-        </title>
-        <link rel="stylesheet" href="CS2001-Week3-Registration.css">
-        <script src="CS2001-Week3-RegistrationValidation.js"></script>
-    </head>
-    <body>
-        <header></header>
-        <nav>
-            <!-- ToDo: An unordered list to represent the menu, 
-                       each list item should correspond to the menu items (Home, Register, Login, Help)
-                       The css class of the menu is "navlist"
-                       Check lecture slide 13 to learn about lists.
-                       Check lecture slide 14 as an example of a more basic menu.
-                       Check lecture slide 26 for CSS class selector-->
-         </nav>
-        <main>
-            <!-- Check lecture slide 16 to learn about HTML5 semantic elements-->
-            <aside>
-                 <input type="text" class="search" id="search" name="search" placeholder="Search"><br>
-            </aside>
-            <section>
-                <form class="center" novalidate>
-                <!-- ToDo: Implement the form containing 
+  <head>
+    <title>Fresh Food For All</title>
+    <link rel="stylesheet" href="CS2001-Week3-Registration.css" />
+    <script src="CS2001-Week3-RegistrationValidation.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <ul class="navlist">
+        <li><a>Home</a></li>
+        <li><a>Register</a></li>
+        <li><a>Login</a></li>
+        <li><a>Help</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- Check lecture slide 16 to learn about HTML5 semantic elements-->
+      <aside>
+        <input
+          type="text"
+          class="search"
+          id="search"
+          name="search"
+          placeholder="Search"
+        /><br />
+      </aside>
+      <section>
+        <form class="center" novalidate>
+          <!-- ToDo: Implement the form containing 
                            Name - type text
                            email- type text
                            password - type text
@@ -34,16 +38,17 @@
                            Check lecture slide 17 and the links on the slide to learn about forms
                            Check lecture slide 44 for button that would react to a click Event
                         -->
-                    <!-- Example given for user type checkboxes-->
-                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
-                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
-                    <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
-
-                </form>
-                <div class="center" id="hiddenSection">
-                </div>
-            </section>
-        </main>
-    </body>
+          <!-- Example given for user type checkboxes-->
+          <input type="checkbox" id="buyer" name="buyer" value="buyer" />
+          <label for="buyer"
+            >I want to buy produce directly from allotment owners.</label
+          ><br />
+          <input type="checkbox" id="seller" name="seller" value="seller" />
+          <label for="seller">I want to sell produce from my allotment.</label
+          ><br /><br />
+        </form>
+        <div class="center" id="hiddenSection"></div>
+      </section>
+    </main>
+  </body>
 </html>

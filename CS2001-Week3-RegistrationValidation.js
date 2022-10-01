@@ -28,25 +28,17 @@ function readForm(){
 //Function to validate the form
 function validateForm() {
     formValid = false;
-     //ToDo: Fill in the conditions to check the validity of the form.
-    //For example, you need to check if any of the text fields are empty
-    //If you have assigned the variables in readForm correctly, you can
-    //see their values for example, by using value for a text input, or checked
-    //for a checkbox
-    //You can also follow HTML5 validation here: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
-    //and see if you can use the validity field - for example, username.validity 
-    //to check if the form input is valid
-    if (false){/*ToDo: Add the correct condition to check no text field is empty*/
+    if (!(username && email && password && repPassword)){
             alert("Please fill in all text fields.");
-    } else if (false){/*ToDo: Add the correct condition to check email is of correct form*/
+    } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
         alert("Invalid e-mail address. Please enter your e-mail again.");
-    } else if (false){/*ToDo: Add the correct password condition*/
-        alert("Password is too short. Please select another password");
-    } else if(false) {/*ToDo: Check if passwords match*/
+    } else if (password.length<7){
+        alert("Password is too short. Please select a password with 7 or more characters");
+    } else if(password !== repPassword) {
         alert("Passwords do not match. Please retry");
     } else if(userType.length === 0){
         alert("Please check at least one checkbox to select being a seller or a buyer in the system.")
-    } else if (false){ /*ToDo: Add Condition to check Term and Conditions checked*/
+    } else if (!tosCheckBox){ 
         alert("Please agree to the Terms and Conditions, and Privacy Policy.")
     }else {
         formValid = true;
@@ -69,7 +61,7 @@ function submitForm(){
     readForm();
     validateForm();
     if (formValid){
-        var formText = username.value + " registered as: "
+        var formText = username + " registered as: "
                      + userType.join(" and ") 
                      + ".";
 

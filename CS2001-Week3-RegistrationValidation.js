@@ -10,17 +10,11 @@ var tosCheckBox;
 
 //Function to read the form
 function readForm(){
-    //ToDo: This function should read the form inputs, and assign their
-    //values to the variables defined above; See Lecture slide 46
-    //You can also get elements by ID: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
-    //You can get elements by tag name: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName 
-    //Read username, email, password, repPassowrd, and tosCheckBox fields
-
-    //Example for creating the userType array from checkboxes
-    //Access the buyer and seller checkboxes via their IDs
-    //Create an empty userType array
-    //If buyer is checked, push "buyer" to userType
-    //If seller is checked, push "seller" to userType
+    username = document.getElementById("name").value
+    email = document.getElementById("email").value
+    password = document.getElementById("password").value
+    repPassword = document.getElementById("password2").value
+    tosCheckBox = document.getElementById("tos").checked
     var buyerCheckBox = document.getElementById("buyer");
     var sellerCheckBox = document.getElementById("seller");
     userType = [];

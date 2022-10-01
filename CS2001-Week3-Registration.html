@@ -16,7 +16,7 @@
       </ul>
     </nav>
     <main>
-      <!-- Check lecture slide 16 to learn about HTML5 semantic elements-->
+      <!-- Sidebar-->
       <aside>
         <input
           type="text"
@@ -26,8 +26,32 @@
           placeholder="Search"
         /><br />
       </aside>
+      <br />
+      <!-- Main form -->
       <section>
         <form class="center" novalidate>
+          <label for="name">Name:</label><br />
+          <input type="text" name="name" id="name" /><br /><br />
+          <label for="email">Email:</label><br />
+          <input type="text" name="email" id="email" /><br /><br />
+          <label for="password">Password</label><br />
+          <input type="password" name="password" id="password" /><br /><br />
+          <label for="password2">Re-type password</label><br />
+          <input type="password" name="password2" id="password2" /><br /><br />
+          <input type="checkbox" id="buyer" name="buyer" value="buyer" />
+          <label for="buyer"
+            >I want to buy produce directly from allotment owners.</label
+          ><br />
+          <input type="checkbox" id="seller" name="seller" value="seller" />
+          <label for="seller">I want to sell produce from my allotment.</label
+          ><br /><br />
+          <input type="checkbox" name="tos" id="tos" />
+          <label for="tos"
+            >I agree to the <a href="#">Terms of Use</a> and
+            <a href="#">Privacy Policy</a></label
+          ><br /><br />
+          <button onclick="readForm()">Register</button>
+          <a href="#">Learn more</a>
           <!-- ToDo: Implement the form containing 
                            Name - type text
                            email- type text
@@ -39,13 +63,6 @@
                            Check lecture slide 44 for button that would react to a click Event
                         -->
           <!-- Example given for user type checkboxes-->
-          <input type="checkbox" id="buyer" name="buyer" value="buyer" />
-          <label for="buyer"
-            >I want to buy produce directly from allotment owners.</label
-          ><br />
-          <input type="checkbox" id="seller" name="seller" value="seller" />
-          <label for="seller">I want to sell produce from my allotment.</label
-          ><br /><br />
         </form>
         <div class="center" id="hiddenSection"></div>
       </section>
